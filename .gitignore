@@ -1,1 +1,3 @@
 .vscode/*
+twilio.env
+send_to_numbers.txt

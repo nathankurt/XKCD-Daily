@@ -4,10 +4,6 @@ from twilio.rest import Client
 import os
 
 
-
-
-
-
 def send_text(current_num,title, secret_text,image_url):
     account_sid = os.environ['TWILIO_ACCOUNT_SID']
     auth_token = os.environ['TWILIO_AUTH_TOKEN']
@@ -31,6 +27,7 @@ def send_text(current_num,title, secret_text,image_url):
 
 
 # IF SUCCESSFUL, update number
+
 
 
 
