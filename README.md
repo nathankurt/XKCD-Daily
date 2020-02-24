@@ -15,13 +15,13 @@ Because I'm too lazy to actually go and check the XKCD website, I created a bot 
 ## Create Yourself
 
 If you want to do something similar, this works with a Twilio Trial Account. Fork this repo and make a Twilio Account. After you make the account go ahead and grab the following
-  * A phone number with MMS support. - TWILIO_PHONE_NUMBER
-  * Twilio Account SID - TWILIO_ACCOUNT_SID
-  * Twilio Auth Token - TWILIO_AUTH_TOKEN
-  * A Verified Number to send to. - TO_PHONE_NUMBER
+  * A phone number with MMS support. - `TWILIO_PHONE_NUMBER`
+  * Twilio Account SID - `TWILIO_ACCOUNT_SID`
+  * Twilio Auth Token - `TWILIO_AUTH_TOKEN`
+  * A Verified Number to send to. - `TO_PHONE_NUMBER`
 
 Take those things and make them secrets in GitHub Settings and name them the name I have associated above. As long as your phone number is verified, the action should run and send a text.
-If it's a trial account, it will contain something like the first line of this text. 
+If it's a trial account, it will contain a line that says `Sent from your Twilio Trial Account` which is a little annoying, but can be avoided if you decide to upgrade your account. 
 
 ![XKCD Comic Text](https://user-images.githubusercontent.com/9864281/75191785-06edb380-5721-11ea-8069-53a1c3dd7786.jpg)
 
