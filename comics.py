@@ -3,11 +3,6 @@ import urllib.request
 from twilio.rest import Client
 import os
 
-
-
-
-
-
 def send_text(current_num,title, secret_text,image_url):
     account_sid = os.environ['TWILIO_ACCOUNT_SID']
     auth_token = os.environ['TWILIO_AUTH_TOKEN']
@@ -32,11 +27,6 @@ def send_text(current_num,title, secret_text,image_url):
 
 # IF SUCCESSFUL, update number
 
-
-
-
-
-
 url = "https://xkcd.com/info.0.json"
 
 r = requests.get(url)
@@ -54,14 +44,12 @@ last_sent_num = [line.strip() for line in open("num.txt")][0]
 
 if (int(current_num) != int(last_sent_num)):
     #XKCD has been updated, go ahead and send it
-    
-
     send_text(current_num,title,secret_text,image_url)
-    # with open("num.txt", "w") as f:
-    #     f.write(str(current_num))
-    # assert int(data['num']) == int([line.strip() for line in open("num.txt")][0]), f"ERROR: num.txt didn't update how it was supposed to \
-    #     num.txt = {[line.strip() for line in open('num.txt')][0]} And\
-    #     data['num'] = {data['num']} "
+    with open("num.txt", "w") as f:
+        f.write(str(current_num))
+    assert int(data['num']) == int([line.strip() for line in open("num.txt")][0]), f"ERROR: num.txt didn't update how it was supposed to \
+        num.txt = {[line.strip() for line in open('num.txt')][0]} And\
+        data['num'] = {data['num']} "
 
 
 
