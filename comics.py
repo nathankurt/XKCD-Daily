@@ -17,7 +17,7 @@ def send_text(current_num,title, secret_text,image_url):
             body = f"XKCD Comic {current_num}: {title} \nAlt Text: {secret_text}",
             media_url=[image_url],
             from_= os.environ['TWILIO_PHONE_NUMBER'],
-            to=[line.strip() for line in open('send_to_numbers.txt')]
+            to=os.environ['TO_PHONE_NUMBER']
         )
 
 
