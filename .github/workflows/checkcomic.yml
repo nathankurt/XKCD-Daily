@@ -40,8 +40,8 @@ jobs:
 
     - name: Commit Files
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"\
+        git config --global user.email "action@github.com"
+        git config --global user.name "GitHub Action"\
         git add num.txt
         git commit -m "Update Number"
     - name: Push Changes
