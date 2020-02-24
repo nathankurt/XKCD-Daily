@@ -1,6 +1,8 @@
 name: XKCD DAILY COMIC
 
-on: [push]
+on: 
+  schedule:
+    - cron: '0 15-19 * * 1-5'
 
 jobs:
   build:
