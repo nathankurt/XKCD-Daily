@@ -2,6 +2,7 @@ import requests
 import urllib.request
 from twilio.rest import Client
 import os
+#says there may be something wrong with the username, not sure what that's about
 
 def send_text(current_num,title, secret_text,image_url):
     account_sid = os.environ['TWILIO_ACCOUNT_SID']
