@@ -32,6 +32,11 @@ jobs:
     - name: Run application
       run: |
         python comics.py
+      env:
+        TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID  }}
+        TWILIO_ACCOUNT_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
+        TWILIO_PHONE_NUMBER: ${{ secrets.TWILIO_PHONE_NUMBER }}
+        TO_PHONE_NUMBER: ${{ secrets.TO_PHONE_NUMBER }}
     - name: Commit Files
       run: |
         git config --local user.email "action@github.com"
