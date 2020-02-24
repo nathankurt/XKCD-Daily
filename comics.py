@@ -10,7 +10,7 @@ def send_text(current_num,title, secret_text,image_url):
     client = Client(account_sid, auth_token)
     message = client.messages \
         .create(
-            body = f"XKCD Comic {current_num}: {title} \nAlt Text: {secret_text}",
+            body = f"\nXKCD Comic {current_num}: {title} \nAlt Text: {secret_text}",
             media_url=[image_url],
             from_= os.environ['TWILIO_PHONE_NUMBER'],
             to = os.environ['TO_PHONE_NUMBER']
