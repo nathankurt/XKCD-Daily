@@ -39,15 +39,9 @@ jobs:
         python comics.py
 
     - name: Commit Files
-      run: |
-        git config --global user.email "action@github.com"
-        git config --global user.name "GitHub Action"\
-        git add num.txt
-        git commit -m "Update Number"
-    - name: Push Changes
-      uses: ad-m/github-push-action@master
+      uses: stefanzweifel/git-auto-commit-action@v4.0.0
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        commit_message: Update XKCD Number
 
     
 
