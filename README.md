@@ -1,5 +1,5 @@
 ![XKCD DAILY COMIC](https://github.com/nathankurt/XKCD-Daily/workflows/XKCD%20DAILY%20COMIC/badge.svg)
-
+This is failing because my Twilio Trial is up and I don't feel like paying to renew it. 
 # XKCD-Daily
 I really love the XKCD Comics and wanted to play around with Twilio so I decided to make a bot to scrape some data with it. 
 
